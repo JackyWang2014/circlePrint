@@ -7,8 +7,8 @@ def genArray(m, n):
             b.append(count)
             count += 1
         a.append(b)
+    print a
     return a
-
 def circleCount(a):
     rows = len(a)
     cols = len(a[0])
@@ -20,10 +20,8 @@ def circleCount(a):
     right = cols
     top = 0
     down = rows
-
     while True:
         #print (left, right, top, down)
-
         for i in range(right - left):
             print a[x][y]
             y += 1
@@ -32,8 +30,6 @@ def circleCount(a):
             break
         y -= 1
         x += 1
-
-
         for i in range(down - top):
             print a[x][y]
             x += 1
@@ -42,7 +38,6 @@ def circleCount(a):
             break
         x -= 1
         y -= 1
-
         for i in range(right - left):
             print a[x][y]
             y -= 1
@@ -60,6 +55,5 @@ def circleCount(a):
             break
         x += 1
         y += 1
-
-a = genArray(7, 5)
+a = genArray(3, 5)
 circleCount(a)
